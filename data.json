@@ -1,0 +1,28 @@
+{
+    "bot": {
+        "prefix": "-",
+        "token": "NzA5NDgyMDM5ODI0NjEzNDU2.Xrmirg.cky1cinrhGa4cFyXvn0PUreTzrA",
+        "color": "#ab3126"
+    },
+    "channels" : {
+        "welcome_ID": "709485788143812609",
+        "rules_ID": "663857219665657857",
+        "log_ID": "664002389056946176",
+        "roles_ID": "663877263321989164"
+    },
+    "messages": {
+        "reactionRoles_ID": "664002942088511498"
+    },
+    "roles": {
+        "muted_ID": "709486441373106267",
+        "ingress_ID": "663876161675198486",
+        "wizard_ID": "663875907123019780",
+        "pokemon_ID": "663875524065493006",
+        "admin_ID": "663658998318366730",
+        "moderator_ID": "663888078762410043"
+    },
+    "links": {
+        "Discord": "https://discord.gg/8ypfQzp",
+        "Reddit": "https://reddit.com/r/catanworldexplorers/" 
+    }
+}
