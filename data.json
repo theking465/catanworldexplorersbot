@@ -4,7 +4,7 @@
         "token": "NzA5NDgyMDM5ODI0NjEzNDU2.Xrmirg.cky1cinrhGa4cFyXvn0PUreTzrA",
         "color": "#ab3126"
     },
-    "channels" : {
+    "channels": {
         "welcome_ID": "709485788143812609",
         "rules_ID": "663857219665657857",
         "log_ID": "664002389056946176",
@@ -23,6 +23,24 @@
     },
     "links": {
         "Discord": "https://discord.gg/8ypfQzp",
-        "Reddit": "https://reddit.com/r/catanworldexplorers/" 
+        "Reddit": "https://reddit.com/r/catanworldexplorers/"
+    },
+    "rules": {
+        "rule1": "1. Stay respectfull to everyone at all times. We don't want to see any foul language that may hurt others. Doing so may result in a mute.\n ",
+        "rule2": "2. This is a server dedicated to a game, therefore we don't want any political issues or topics to be discussed here.\n",
+        "rule3": "3. Use the channels for their intended purpose. general talk about the game goes in <#663857388301844531>, memes go in <#663818122100211753> etc.\n",
+        "rule4": "4. All channels are english only, with an exception for the region channels, there you can talk either english or the language for that region.\n",
+        "rule5": "5. We don't want advertising on this server, doing so may result in a mute or a warning and the ad will be deleted by a moderator. Only if a moderator allowed you to advertise, you can.\n",
+        "rule6": "6. NSFW content of any kind is strictly forbidden and will be deleted followed by either a mute or a strike. Gore, disturbing images, vore, animal cruelty or anything alike is not allowed here. If a staff member finds it unsuitable it will be deleted.\n",
+        "rule7": "7. Racism of any kind is not allowed and will result in a strike.\n",
+        "rule8": "8. Selling your game account isn't allowed on this discord.\n",
+        "rule9": "9. Spam of any kind be it sending messages too fast, emoji spamming, react spamming or cross-channel spam is not allowed and will lead to a mute.\n",
+        "rule10": "10. Don't ping roles without any reason, for example <@&663888078762410043> or <@&663658998318366730>. If you need a specific role, please ping one person that's online. Only for urgent matters you are allowed to ping them. Pinging without a reason will be punished.\n",
+        "rule11": "11. By joining the server you automatically agree with the rules listed here, those are not complete and can be adapted at any time. Staff members can moderate on misbehavior not specifically listed above.\n",
+        "info1": "If a staff member breaks a rule they can be demoted they are not above the rules, if you find a staff doing so, please report them to an <@&663658998318366730>.\n",
+        "info2": "If you're muted and leave the server, you will be banned.\n",
+        "info3": "If a person accumulated 3 warns or strikes, they will be banned. Banned members may appeal their ban one month after the ban happened in the DMs of an admin.\n",
+        "info4": "You can let your friends join the server by using the following link: https://discord.gg/dMhgBbU \n",
+        "end": "Thanks for reading and following the rules."
     }
 }
