@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+var http = require("http");
 const { bot, channels, links } = require('./data.json');
 const levels = require('./levels.json');
 const reactionRoles = require('./functions/reactionroles.js');
@@ -28,6 +29,9 @@ client.on('ready', async() => {
     reactionRoles.execute();
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('a waiting game');
+    setInterval(() => {
+        http.get('http://catan-world-explorers.herokuapp.com/');
+    }, 1000);
 });
 
 client.on('message', message => {
