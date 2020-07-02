@@ -4,6 +4,8 @@ const { bot, channels, links } = require('./data.json');
 const levels = require('./levels.json');
 const reactionRoles = require('./functions/reactionroles.js');
 const linkchecker = require('./functions/linkchecker.js')
+const PORT = process.env.PORT || 3000;
+
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -16,7 +18,9 @@ for (const file of commandFiles) {
 }
 
 module.exports = { client };
-
+app.listen(PORT, () => {
+    console.log(`App is running on port ${ PORT }`);
+});
 
 client.on('ready', async() => {
     reactionRoles.execute();
