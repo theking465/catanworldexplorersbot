@@ -31,7 +31,8 @@ client.on('ready', async() => {
     client.user.setActivity('a waiting game');
     setInterval(() => {
         http.get('http://catan-world-explorers.herokuapp.com/');
-    }, 1000);
+        console.log("interval resetted");
+    }, 1000 * 60 * 15);
 });
 
 client.on('message', message => {
