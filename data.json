@@ -7,7 +7,7 @@
     "channels": {
         "welcome_ID": "709485788143812609",
         "rules_ID": "663857219665657857",
-        "log_ID": "664002389056946176",
+        "log_ID": "735429006463074374",
         "roles_ID": "663877263321989164"
     },
     "messages": {
@@ -19,11 +19,13 @@
         "wizard_ID": "663875907123019780",
         "pokemon_ID": "663875524065493006",
         "admin_ID": "663658998318366730",
-        "moderator_ID": "663888078762410043"
+        "moderator_ID": "663888078762410043",
+        "minimod_ID": "735159374645035130"
     },
     "links": {
         "Discord": "https://discord.gg/8ypfQzp",
-        "Reddit": "https://reddit.com/r/catanworldexplorers/"
+        "Reddit": "https://reddit.com/r/catanworldexplorers/",
+        "Wiki": "https://catanworldexplorers.fandom.com/"
     },
     "rules": {
         "rule1": "1. Stay respectfull to everyone at all times. We don't want to see any foul language that may hurt others. Doing so may result in a mute.\n ",
