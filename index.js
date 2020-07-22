@@ -90,7 +90,7 @@ client.on('guildMemberAdd', member => {
         .setTitle(`Welcome to ${member.guild.name}!`)
         .setAuthor(member.user.tag)
         .setThumbnail(member.user.displayAvatarURL())
-        .setDescription(`Make sure to read our <#${channels.rules_ID}> and have fun!\n\n**__Links:__**\n[Discord server](${links.Discord})\n[Reddit](${links.Reddit})`)
+        .setDescription(`Make sure to read our <#${channels.rules_ID}> and have fun!\n\n**__Links:__**\n[Discord server](${links.Discord})\n[Reddit](${links.Reddit})\n[Wiki](${links.Wiki})`)
         .setFooter(`We have ${member.guild.members.cache.filter(m => !m.user.bot).size} human members now`)
         .setTimestamp();
 
