@@ -28,7 +28,7 @@ app.listen(PORT, () => {
 client.on('ready', async() => {
     reactionRoles.execute();
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity('a waiting game');
+    client.user.setActivity('waiting for open beta');
     setInterval(() => {
         http.get('http://catan-world-explorers.herokuapp.com/');
         console.log("interval resetted");
@@ -83,6 +83,19 @@ client.on('message', message => {
         }
     }
 });
+
+client.on("messageDelete", async msg => {
+    console.log(msg.content);
+    const logChannel = msg.guild.channels.cache.get(channels.log_ID);
+    let embed = new Discord.MessageEmbed().setColor(bot.color)
+        .setTitle("Message deleted")
+        .setAuthor(msg.member.user.tag)
+        .setDescription(msg.content)
+        .addField("channel:", msg.channel.name)
+        .setFooter(msg.member.user.id)
+        .setTimestamp();
+    logChannel.send(embed);
+})
 
 client.on('guildMemberAdd', member => {
     const welcomeEmbed = new Discord.MessageEmbed()
