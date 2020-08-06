@@ -50,7 +50,7 @@ client.on('message', message => {
         console.log(levels);
         fs.writeFileSync('levels.json', JSON.stringify(levels));
     }*/
-
+    if (!message.content.startsWith(bot.prefix)) { return; }
 
 
     const args = message.content.slice(bot.prefix.length).split(/ +/);
