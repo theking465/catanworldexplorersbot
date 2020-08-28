@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 var http = require("http");
-const { bot, channels, links } = require('./data.json');
+const { bot, channels, links, roles } = require('./data.json');
 const levels = require('./levels.json');
 const reactionRoles = require('./functions/reactionroles.js');
 const linkchecker = require('./functions/linkchecker.js')
@@ -112,6 +112,20 @@ client.on('guildMemberAdd', member => {
         welcomeChannel.send(member.toString(), welcomeEmbed);
     }
     console.log(member.user.tag + ' has joined the server');
+});
+client.on('guildMemberRemove', member => {
+    const logChannel = member.guild.channels.cache.get(channels.log_ID);
+    console.log(member.user.tag + " has left the server");
+    if (member.roles.cache.has(roles.muted_ID)) {
+        const jailedEmbed = new Discord.MessageEmbed()
+            .setColor(bot.color)
+            .setTitle("Muted user left")
+            .addField(member.user.id, member.user.tag)
+            .setTimestamp()
+            .setThumbnail(member.user.displayAvatarURL());
+        logChannel.send(jailedEmbed);
+    }
+
 });
 
 client.login(bot.token);
