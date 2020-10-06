@@ -50,6 +50,9 @@ client.on('message', message => {
         console.log(levels);
         fs.writeFileSync('levels.json', JSON.stringify(levels));
     }*/
+    if (message.author.id == 572960667284406292 && (message.content.includes("Canada") || message.content.includes("canada")) && message.content.includes("beta")) {
+        msg.reply("nope definitely not canada");
+    }
     if (!message.content.startsWith(bot.prefix)) { return; }
 
 
