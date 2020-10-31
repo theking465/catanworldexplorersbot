@@ -106,7 +106,7 @@ client.on('guildMemberAdd', member => {
         .setTitle(`Welcome to ${member.guild.name}!`)
         .setAuthor(member.user.tag)
         .setThumbnail(member.user.displayAvatarURL())
-        .setDescription(`Make sure to read our <#${channels.rules_ID}> and have fun!\nMake sure to give your opinion on the game in <#663857388301844531>\nShare your friend code in <#727937067203559514> \n\n**__Links:__**\n[Discord server](${links.Discord})\n[Reddit](${links.Reddit})\n[Wiki](${links.Wiki})`)
+        .setDescription(`Make sure to read our <#${channels.rules_ID}> and have fun!\nCome and say hello in <#663857388301844531>\nShare your friend code in <#727937067203559514> \n\n**__Links:__**\n[Discord server](${links.Discord})\n[Reddit](${links.Reddit})\n[Wiki](${links.Wiki})`)
         .setFooter(`We have ${member.guild.members.cache.filter(m => !m.user.bot).size} human members now`)
         .setTimestamp();
     const welcomeChannel = member.guild.channels.cache.get(channels.welcome_ID);

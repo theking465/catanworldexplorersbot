@@ -4,7 +4,7 @@ module.exports = {
         const Discord = require('discord.js');
         const data = require('../data.json');
         const roles = require('../data.json').roles;
-        const links = ['discord.gg/'];
+        const links = ['discord.gg/', 'discord.com/'];
         const admin = message.guild.roles.cache.get(roles.admin_ID);
         const moderator = message.guild.roles.cache.get(roles.moderator_ID);
 
@@ -24,11 +24,11 @@ module.exports = {
         }
 
         function sendWarning() {
-            let embed = new Discord.MessageEmbed().setColor(data.bot.color).setTitle('Link detected').setDescription('Link are not allowed on this server, send a DM to a moderator for approval.').setAuthor(message.member.user.tag).setTimestamp().setThumbnail(message.member.user.displayAvatarURL());
+            let embed = new Discord.MessageEmbed().setColor(data.bot.color).setTitle('Discord invite detected').setDescription('Posting discord invites without permission is not allowed, send a DM to an admin or moderator for approval.').setAuthor(message.member.user.tag).setTimestamp().setThumbnail(message.member.user.displayAvatarURL());
             message.channel.send(embed);
             message.delete();
             let logChannel = message.guild.channels.cache.get(data.channels.log_ID);
-            let embed2 = new Discord.MessageEmbed().setColor(data.bot.color).setTitle('Link deleted').addField('message', message.content).setAuthor(message.member.user.tag).setTimestamp().setThumbnail(message.member.user.displayAvatarURL());
+            let embed2 = new Discord.MessageEmbed().setColor(data.bot.color).setTitle('Discord invite deleted').addField('message', message.content).setAuthor(message.member.user.tag).setTimestamp().setThumbnail(message.member.user.displayAvatarURL());
             logChannel.send(embed2);
         }
 
