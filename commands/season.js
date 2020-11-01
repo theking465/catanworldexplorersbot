@@ -3,9 +3,10 @@ module.exports = {
     category: 'miscellaneous',
     description: 'show the information about the current season',
     async execute(message) {
-        const seasondata = require("../data.json").season;
+        const { season, bot } = require("../data.json");
+        const Discord = require('discord.js');
         var current = Math.round((new Date()).getTime() / 1000);
-        var end = seasondata.end;
+        var end = season.end;
         var difference = end - current;
         var date = new Date(difference * 1000);
 
@@ -24,10 +25,10 @@ module.exports = {
         console.log(formattedTime);
 
         let embed = new Discord.MessageEmbed().setColor(bot.color)
-            .setTitle("Season end time")
-            .setAuthor("requested by: " + message.member.user.tag)
-            .setDescription(day + " days left")
-            .addField(formattedTime)
+            .setAuthor("season end time")
+            .setTitle("16 days")
+            .setDescription(formattedTime)
             .setTimestamp();
+        message.channel.send(embed);
     },
 };
