@@ -2,6 +2,9 @@
     "season": {
         "end": "1605643200"
     },
+    "moderation": {
+        "removed_links": ["discord.gg", "discord.com"]
+    },
     "bot": {
         "prefix": "-",
         "token": "NzA5NDgyMDM5ODI0NjEzNDU2.Xrmirg.cky1cinrhGa4cFyXvn0PUreTzrA",

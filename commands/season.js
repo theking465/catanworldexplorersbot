@@ -19,14 +19,14 @@ module.exports = {
 
         var day = Math.floor(difference / 3600 / 24);
 
-        // Will display time in 10:30:23 format
+        // Will display time in 00:00:00 format
         var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
         console.log(formattedTime);
 
         let embed = new Discord.MessageEmbed().setColor(bot.color)
             .setAuthor("season end time")
-            .setTitle("16 days")
+            .setTitle(day + " days")
             .setDescription(formattedTime)
             .setTimestamp();
         message.channel.send(embed);

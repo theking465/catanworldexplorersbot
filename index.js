@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fs = require('fs');
 var http = require("http");
 const { bot, channels, links, roles } = require('./data.json');
-const levels = require('./levels.json');
 const reactionRoles = require('./functions/reactionroles.js');
 const linkchecker = require('./functions/linkchecker.js')
 const express = require("express");
@@ -29,6 +28,7 @@ client.on('ready', async() => {
     reactionRoles.execute();
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('waiting for open beta');
+    //used to keep heroku alive
     setInterval(() => {
         http.get('http://catan-world-explorers.herokuapp.com/');
         console.log("interval resetted");
@@ -37,25 +37,12 @@ client.on('ready', async() => {
 
 client.on('message', message => {
     if (message.author.bot) return;
+    //activates link checker
     linkchecker.execute(message);
 
-    //level trying shizzle
-    /*userId = message.author.id;
-    if (userId in levels.users) {
-        levels.users[userId]++;
-        fs.writeFileSync('levels.json', JSON.stringify(levels));
-
-    } else {
-        levels.users[userId] = 0;
-        console.log(levels);
-        fs.writeFileSync('levels.json', JSON.stringify(levels));
-    }*/
-    if (message.author.id == 572960667284406292 && (message.content.includes("Canada") || message.content.includes("canada")) && message.content.includes("beta")) {
-        msg.reply("nope definitely not canada");
-    }
     if (!message.content.startsWith(bot.prefix)) { return; }
 
-
+    //initializes commands and arguments
     const args = message.content.slice(bot.prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
 
@@ -63,10 +50,12 @@ client.on('message', message => {
         client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
     if (!command) return;
 
+    //returns if command got used inside a DM
     if (message.channel.type !== 'text') {
         return message.channel.send(':warning: I can\'t execute commands inside DMs.');
     }
 
+    //activates the command or logs if an error occured
     try {
         command.execute(message, args, bot.prefix);
     } catch (error) {
@@ -87,6 +76,7 @@ client.on('message', message => {
     }
 });
 
+//logs deleted messages
 client.on("messageDelete", async msg => {
     console.log(msg.content);
     const logChannel = msg.guild.channels.cache.get(channels.log_ID);
@@ -100,6 +90,7 @@ client.on("messageDelete", async msg => {
     logChannel.send(embed);
 })
 
+//sends welcome message for a new user
 client.on('guildMemberAdd', member => {
     const welcomeEmbed = new Discord.MessageEmbed()
         .setColor(bot.color)
@@ -115,9 +106,10 @@ client.on('guildMemberAdd', member => {
     }
     console.log(member.user.tag + ' has joined the server');
 });
+
+//logs if a muted user leaves the server
 client.on('guildMemberRemove', member => {
     const logChannel = member.guild.channels.cache.get(channels.log_ID);
-    console.log(member.user.tag + " has left the server");
     if (member.roles.cache.has(roles.muted_ID)) {
         const jailedEmbed = new Discord.MessageEmbed()
             .setColor(bot.color)
@@ -130,4 +122,5 @@ client.on('guildMemberRemove', member => {
 
 });
 
+//logs in
 client.login(bot.token);
