@@ -78,7 +78,6 @@ client.on('message', message => {
 
 //logs deleted messages
 client.on("messageDelete", async msg => {
-    console.log(msg.content);
     const logChannel = msg.guild.channels.cache.get(channels.log_ID);
     let embed = new Discord.MessageEmbed().setColor(bot.color)
         .setTitle("Message deleted")
