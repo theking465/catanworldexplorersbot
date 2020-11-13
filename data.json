@@ -53,5 +53,9 @@
         "info3": "If a person accumulated 3 warns or strikes, they will be banned. Banned members may appeal their ban one month after the ban happened in the DMs of an admin.\n",
         "info4": "You can let your friends join the server by using the following link: https://discord.gg/dMhgBbU \n",
         "end": "Thanks for reading and following the rules."
+    },
+    "Store_Links": {
+        "GooglePlay": "https://play.google.com/store/apps/details?id=com.nianticlabs.catanwe",
+        "AppStore": "https://apps.apple.com/app/catan-world-explorers/id1495003617"
     }
 }
