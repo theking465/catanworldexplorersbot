@@ -28,11 +28,6 @@ client.on('ready', async() => {
     reactionRoles.execute();
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('waiting for open beta');
-    //used to keep heroku alive
-    setInterval(() => {
-        http.get('http://catan-world-explorers.herokuapp.com/');
-        console.log("interval resetted");
-    }, 1000 * 60 * 15);
 });
 
 client.on('message', message => {
