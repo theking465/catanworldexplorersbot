@@ -31,7 +31,7 @@ module.exports = {
 
             let logChannel = message.guild.channels.cache.get(channels.log_ID);
             let logembed = new Discord.MessageEmbed().setColor(bot.color).setTitle('Discord invite deleted').addField('message', message.content).setAuthor(message.member.user.tag).setTimestamp().setThumbnail(message.member.user.displayAvatarURL());
-
+	    if(!logChannel) return;
             logChannel.send(logembed);
         }
 
