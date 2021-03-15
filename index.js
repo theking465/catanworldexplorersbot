@@ -33,7 +33,9 @@ client.on('ready', async() => {
 client.on('message', message => {
     if (message.author.bot) return;
     //activates link checker
-    linkchecker.execute(message);
+    if(message.guild.id === "663586237965139998"){
+    	linkchecker.execute(message);
+    }
 
     if (!message.content.startsWith(bot.prefix)) { return; }
 
