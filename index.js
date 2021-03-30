@@ -6,7 +6,7 @@ const reactionRoles = require('./functions/reactionroles.js');
 const linkchecker = require('./functions/linkchecker.js')
 const express = require("express");
 var app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3050;
 
 
 const client = new Discord.Client();
