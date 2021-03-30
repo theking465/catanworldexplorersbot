@@ -10,7 +10,7 @@ module.exports = {
 
         //adds a filter for the collector
         const filter = (reaction) => {
-            return reaction.emoji.id == '664004090124173326' || reaction.emoji.id == '664001732052910092' || reaction.emoji.id == '664003725035044886' || reaction.emoji.id == '728253916025847859' || reaction.emoji.id == '728253916004745327' || reaction.emoji.id == '728253915694497884';
+            return reaction.emoji.id == '664004090124173326' || reaction.emoji.id == '826356826500759583' || reaction.emoji.id == '664001732052910092' || reaction.emoji.id == '664003725035044886' || reaction.emoji.id == '728253916025847859' || reaction.emoji.id == '728253916004745327' || reaction.emoji.id == '728253915694497884';
         };
 
         //creates collector
@@ -21,6 +21,7 @@ module.exports = {
             if (reaction.emoji.id == '664004090124173326') guild.members.cache.get(user.id).roles.add(roles.wizard_ID);
             if (reaction.emoji.id == '664001732052910092') guild.members.cache.get(user.id).roles.add(roles.pokemon_ID);
             if (reaction.emoji.id == '664003725035044886') guild.members.cache.get(user.id).roles.add(roles.ingress_ID);
+            if (reaction.emoji.id == '826356826500759583') guild.members.cache.get(user.id).roles.add(roles.pikmin_ID);
             if (reaction.emoji.id == '728253916025847859') guild.members.cache.get(user.id).roles.add(roles.wolf_ID);
             if (reaction.emoji.id == '728253916004745327') guild.members.cache.get(user.id).roles.add(roles.eagle_ID);
             if (reaction.emoji.id == '728253915694497884') guild.members.cache.get(user.id).roles.add(roles.bear_ID);
@@ -31,6 +32,7 @@ module.exports = {
             if (reaction.emoji.id == '664004090124173326') guild.members.cache.get(user.id).roles.remove(roles.wizard_ID);
             if (reaction.emoji.id == '664001732052910092') guild.members.cache.get(user.id).roles.remove(roles.pokemon_ID);
             if (reaction.emoji.id == '664003725035044886') guild.members.cache.get(user.id).roles.remove(roles.ingress_ID);
+            if (reaction.emoji.id == '826356826500759583') guild.members.cache.get(user.id).roles.remove(roles.pikmin_ID);
             if (reaction.emoji.id == '728253916025847859') guild.members.cache.get(user.id).roles.remove(roles.wolf_ID);
             if (reaction.emoji.id == '728253916004745327') guild.members.cache.get(user.id).roles.remove(roles.eagle_ID);
             if (reaction.emoji.id == '728253915694497884') guild.members.cache.get(user.id).roles.remove(roles.bear_ID);
