@@ -1,4 +1,11 @@
 module.exports = {
+	/**
+	 * Function which sends an embed at the specified channel.
+	 * @param {*} message 
+	 * @param {*} title Title of the embed
+	 * @param {*} description Description of the embed
+	 * @param {*} whereToSend Channel where to send the embed too: "c.log" || "c.msg"
+	 */
 	execute(message, title, description, whereToSend) {
 		const Discord = require("discord.js");
 		const { bot, channels } = require("../data.json");
